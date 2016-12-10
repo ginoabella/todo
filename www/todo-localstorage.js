@@ -39,7 +39,7 @@ todoStorage.remove = function(label){
         if(item.label === label) {
             this.collection.splice(i,1);
         }
-    });
+    }.bind(this));
     
     this.save();
     return true;
